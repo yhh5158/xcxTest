@@ -10,13 +10,6 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   },
-  "usingComponents": {
-    "wux-icon": "../dist/icon/index",
-    "wux-button": "../dist/button/index",
-    "wux-tabs": "../dist/tabs/index",
-    "wux-tab": "../dist/tab/index",
-    "wux-badge": "../dist/badge/index"
-  },
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"

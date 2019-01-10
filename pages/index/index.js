@@ -55,6 +55,10 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+
+        wx.navigateTo({
+          url: '../map/map'
+        })
       }
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -69,6 +73,7 @@ Page({
       })
     }
   },
+  
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
