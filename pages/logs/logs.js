@@ -5,11 +5,11 @@ Page({
   data: {
     logs: []
   },
-  onLoad: function (propties) {
+  onLoad: function () {
     this.setData({
-      logs: [{
-        content:'点击的item是'+propties.tabId + ","+propties.itemId,
-      }]
+      logs: (wx.getStorageSync('logs') || []).map(log => {
+        return util.formatTime(new Date(log))
+      })
     })
   }
 })
