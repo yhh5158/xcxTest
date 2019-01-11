@@ -1,0 +1,35 @@
+<view class="title">特惠流量月包</view>
+<view class="scroll-box">
+  <scroll-view class="coupon-scroll-view_x" scroll-x="true" scroll-with-animation="true" bindscrolltoupper="toUpper" bindscrolltolower="toLower" id="scroll-view" scroll-left="{{ scrollLeft }}">
+    <view class="flow-items {{ item.isSelected ? 'flow-items-selected':'' }}" wx:for="{{ couponData }}" wx:key="{{ item.id}}" bindtap="onCouponItemClick" id="item-{{ item.id }}" data-item="{{ item }}">
+      <block wx:if="{{ item.id == '1' }}">
+        <view class="flow-item">
+          <view class="item-title {{ item.isSelected ? 'selected-color':'' }}">{{ item.itemTitle }}</view>
+          <view class="first-item-text {{ item.isSelected ? 'selected-color':'' }}">为你推荐</view>
+          <view class="item-price {{ item.isSelected ? 'selected-color':'' }}">{{ item.itemPrice}}</view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="flow-item">
+          <view class="item-title {{ item.isSelected ? 'selected-color':'' }}">{{ item.itemTitle }}</view>
+          <view class="item-price {{ item.isSelected ? 'selected-color':'' }}">{{ item.itemPrice}}</view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+ <scroll-view class="coupon-scroll-view_x" scroll-x="true" scroll-with-animation="true" bindscrolltoupper="toUpper" bindscrolltolower="toLower" id="scroll-view" scroll-left="{{ scrollLeft }}">
+    <view class="flow-items {{ item.isSelected ? 'flow-items-selected':'' }}" wx:for="{{ couponData1}}" wx:key="{{ item.id}}" bindtap="onCouponItemClick1" id="item-{{ item.id }}" data-item="{{ item }}">
+      <block >
+        <view class="flow-item">
+          <view class="item-title {{ item.isSelected ? 'selected-title-color':'' }}">         
+          <text class="iconfont {{ item.itemTitle }}"></text>
+          </view>         
+          <view class="item-price {{ item.isSelected ? 'selected-bottom-color':'' }}">{{ item.itemPrice}}</view>
+        </view>
+      </block>
+     
+    </view>
+  </scroll-view>
+
+</view>

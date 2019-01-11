@@ -42,6 +42,26 @@ Page({
         title: 'Tab 3',
         content: 'Content of tab 3',
       },
+      {
+        key: 'tab4',
+        title: 'Tab 4',
+        content: 'Content of tab 4',
+      },
+      {
+        key: 'tab5',
+        title: 'Tab 5',
+        content: 'Content of tab 5',
+      },
+      {
+        key: 'tab6',
+        title: 'Tab 6',
+        content: 'Content of tab 6',
+      },
+      {
+        key: 'tab7',
+        title: 'Tab 7',
+        content: 'Content of tab 7',
+      },
     ],
     
   },
@@ -55,6 +75,15 @@ Page({
       index,
     })
   },
+  // 滚动切换标签样式
+  switchTab: function (e) {
+    console.log(e)
+    // this.setData({
+    //   // currentTab: e.detail.current
+    // });
+    // this.checkCor();
+  },
+
   regionchange(e) {
     var that = this;
     console.log(e)
@@ -139,6 +168,18 @@ Page({
         console.log('animation end')
       }
     })
+  },
+  onSwiperChange(e) {
+    console.log('onSwiperChange', e)
+    const { current: index, source } = e.detail
+    const { key } = this.data.tabs[index]
+
+    if (!!source) {
+      this.setData({
+        key,
+        index,
+      })
+    }
   },
   includePoints: function() {
     this.mapCtx.includePoints({

@@ -13,7 +13,8 @@ Page({
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      //url: '../logs/logs'
+      url: '../buypage/buypage'
     })
   },
   //跳转到map

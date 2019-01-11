@@ -2,6 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
+    "pages/testscroll/testscroll",
+    "pages/buypage/buypage",
     "pages/map/map"
   ],
   "window":{
@@ -15,6 +17,8 @@
     "wux-button": "../dist/button/index",
     "wux-tabs": "../dist/tabs/index",
     "wux-tab": "../dist/tab/index",
+    "wux-row": "../dist/row/index",
+    "wux-col": "../dist/col/index",
     "wux-badge": "../dist/badge/index"
   },
   "permission": {

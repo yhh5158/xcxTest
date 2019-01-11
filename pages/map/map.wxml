@@ -13,24 +13,103 @@
      
     ></map>
   </view>
-  <view class="btn-area">
+  <!-- <view class="btn-area">
     <button bindtap="getCenterLocation" class="page-body-button" type="primary">获取位置</button>
     <button bindtap="moveToLocation" class="page-body-button" type="primary">移动位置</button>
     <button bindtap="translateMarker" class="page-body-button" type="primary">移动标注</button>
     <button bindtap="includePoints" class="page-body-button" type="primary">缩放视野展示所有经纬度</button>
-  </view>
-   <view class="sub-title">With Swiper</view>
+  </view> -->
+   <!-- <view class="sub-title">With Swiper</view> -->
         <wux-tabs wux-class="bordered" controlled scroll current="{{ key }}" bindchange="onTabsChange">
             <block wx:for="{{ tabs }}" wx:key="key">
                 <wux-tab key="{{ item.key }}" title="{{ item.title }}"></wux-tab>
+               
             </block>
         </wux-tabs>
         <swiper current="{{ index }}" bindchange="onSwiperChange">
             <block wx:for="{{ tabs }}" wx:key="key">
                 <swiper-item>
-                    <!-- <view class="content">{{ item.content }}</view> -->
-                     <wux-button block type="positive">positive</wux-button>
+                    <view class="content">{{ item.content }}</view>
+                     <!-- <wux-button block type="positive">positive</wux-button> -->
                 </swiper-item>
             </block>
         </swiper>
+        <scroll-view class="scroll-view_H" scroll-x style="width: 100%" bindscroll="switchTab">
+        <view class="scroll-view-item_H">
+        <view class="item">
+        <text class="iconfont icon-gouwuche" style='color : red'></text>
+        <text> 购物</text>
+        </view>
+        </view>
+        <view class="scroll-view-item_H">
+        <view class="item">
+        <text class="iconfont icon-gouwuche" style='color : red'></text>
+        <text> 购物1</text>
+        </view>
+        </view>
+        <view class="scroll-view-item_H">
+        <view class="item">
+        <text class="iconfont icon-gouwuche" style='color : red'></text>
+        <text> 购物2</text>
+        </view>
+        </view>
+        <view class="scroll-view-item_H">
+        <view class="item">
+        <text class="iconfont icon-gouwuche" style='color : red'></text>
+        <text> 购物1</text>
+        </view>
+        </view>
+        <view class="scroll-view-item_H">
+        <view class="item">
+        <text class="iconfont icon-gouwuche" style='color : red'></text>
+        <text> 购物1</text>
+        </view>
+        </view>
+        <view class="scroll-view-item_H">
+        <view class="item">
+        <text class="iconfont icon-gouwuche" style='color : red'></text>
+        <text> 购物1</text>
+        </view>
+        </view>
+        </scroll-view>
+
+   <!-- <wux-tabs controlled scroll current="{{ current }}" bindchange="onTabsChange">
+            <wux-tab  key="tab1"> -->
+                
+                <!-- <text class="iconfont icon-gouwuche">\n123</text> -->
+                
+                    
+                      <!-- <view class="item">
+                      <text style='font-size:20rpx;'> 购物1 </text>
+                      <text class="iconfont icon-gouwuche" style='font-size:20rpx;'></text>
+                      </view>     -->
+                      <!-- <view class="cell">
+                        <text class="iconfont icon-gouwuche" ></text>
+                        <view class="title">{{'购物1'}}</view>
+                    </view>
+           <wux-tabbar-item title="Tab 6">
+                <wux-icon wux-class="icon" type="ios-home" size="22" slot="icon-on" />
+               
+            </wux-tabbar-item>
+            </wux-tab>
+            <wux-tab key="tab2">
+                <text class="iconfont icon-gouwuche">\ntttt</text>
+            </wux-tab>
+            <wux-tab key="tab3">
+                <text class="iconfont icon-gouwuche">\ntttt</text>
+            </wux-tab>
+            <!-- <wux-tab key="tab4">
+                <text class="iconfont icon-gouwuche"></text>
+            </wux-tab>
+            <wux-tab key="tab5">
+                <text class="iconfont icon-gouwuche"></text>
+            </wux-tab>
+            <wux-tab key="tab6">
+                <text class="iconfont icon-gouwuche"></text>
+            </wux-tab>
+            <wux-tab key="tab7">
+                <text class="iconfont icon-gouwuche"></text>
+            </wux-tab> 
+        </wux-tabs>-->
+
 </view>
