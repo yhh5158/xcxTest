@@ -104,6 +104,13 @@ Page({
       inputbuyValue: this.data.inputbuyValue + " " + this.data.bottomplaceholderdetail[id]   
     })
   },
+  inputupdate: function (e) {
+    console.log(e)
+    var input = e.detail.value;
+    this.setData({
+      inputbuyValue: input
+    })
+  },
   onCouponItemClick: function(e) {
     console.log("onCouponItemClick:", e)
     var id = e.currentTarget.dataset.item.id;

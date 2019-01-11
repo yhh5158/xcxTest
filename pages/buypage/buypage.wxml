@@ -16,7 +16,7 @@
 <view class="divider"></view>
 <view class="buytitle">帮我购买</view>
 <view class="scroll-box"></view>
-<input class="input" auto-focus value="{{inputbuyValue}}"placeholder="{{defaultString}}" placeholder-class="input-placeholder-class"/>
+<textarea class="input" auto-focus value="{{inputbuyValue}}"placeholder="{{defaultString}}" placeholder-class="input-placeholder-class" bindinput="inputupdate"/>
   <view class="page__bd">
     <block wx:for="{{[1, 2, 3]}}"wx:for-index="out">
     <wux-row > 

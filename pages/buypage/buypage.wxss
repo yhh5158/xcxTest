@@ -110,7 +110,7 @@
 .input {
   font-size: 20rpx;
   margin-left: 25rpx;
-  margin-bottom: 50rpx;
+  max-lines: 4;
   color: black;
 }
 
